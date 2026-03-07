@@ -1,0 +1,13 @@
+---
+version: 3
+tasks:
+  build:
+    aliases: [craft]
+    cmds:
+      - snapcraft pack
+  extract:
+    cmds:
+      - unsquashfs -d snap-root feishin_*.snap
+  clean:
+    cmds:
+      - rm -rf snap-root feishin_*.snap

@@ -1,0 +1,62 @@
+name: feishin
+title: Feishin
+summary: A modern self-hosted music player
+description: |
+  **Installation**
+  Feishin requires access to the `password-manager-service` interface for secure password storage:
+  `sudo snap connect feishin:password-manager-service`
+website: https://github.com/jeffvli/feishin
+license: GPL-3.0+
+icon: snap/gui/feishin.png
+
+version: 1.6.0
+base: core24
+grade: devel
+confinement: strict
+compression: lzo
+
+platforms: 
+  amd64:
+
+plugs:
+  shmem:
+    interface: shared-memory
+    private: true
+
+slots:
+  mpris:
+    interface: mpris
+    name: Feishin
+
+parts:
+  local-parts:
+    plugin: dump
+    source: snap/local
+    source-type: local
+
+  feishin:
+    plugin: dump
+    source: https://github.com/jeffvli/feishin/releases/download/v$SNAPCRAFT_PROJECT_VERSION/Feishin-linux-x64.tar.xz
+    source-type: tar
+    organize:
+      '*': usr/share/feishin/
+    prime:
+      - -usr/share/feishin/chrome-sandbox
+
+apps:
+  feishin:
+    command: usr/bin/launcher
+    environment:
+      TMPDIR: $XDG_RUNTIME_DIR
+      DISABLE_AUTO_UPDATES: 'true'
+    plugs:
+      - audio-playback
+      - home
+      - network
+      - password-manager-service
+      - screen-inhibit-control
+      - shmem
+    slots:
+      - mpris
+    extensions:
+      - gnome
