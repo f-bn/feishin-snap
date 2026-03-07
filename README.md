@@ -54,10 +54,11 @@ This repository contains an unofficial snap package recipe for [Feishin](https:/
    sudo snap connect feishin:password-manager-service
    ```
 
-## Validation checklist
+## ✅ Checklist
 
 - [x] Disable auto-updates
 - [x] Ensure media control via MPRIS
 - [x] Password storage to system keyring (validated against GNOME keyring) 
 - [ ] MPV backend
 - [ ] Discord Rich Presence (if possible, especially with Discord snap)
+- [ ] Publish to Snap store
