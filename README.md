@@ -57,7 +57,7 @@ This repository contains an unofficial snap package recipe for [Feishin](https:/
 ## ✅ Checklist
 
 - [x] Disable auto-updates
-- [x] Ensure media control via MPRIS
+- [x] Media control via MPRIS
 - [x] Password storage to system keyring (validated against GNOME keyring)
 - [ ] Remote Control server
 - [ ] MPV backend
