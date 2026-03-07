@@ -1,4 +1,5 @@
 *.snap
+snap-root
 parts
 prime
 stage
