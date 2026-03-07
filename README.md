@@ -1,10 +1,16 @@
-# Feishin Snap
+<p align="center">
+  <img src="snap/gui/feishin.png" alt="Feishin" width="128" />
+</p>
 
-Unofficial snap package for [Feishin](https://github.com/jeffvli/feishin).
+---
 
-## Setup
+## 📋 Overview
 
-### Setup Snapcraft (with Multipass backend)
+This repository contains an unofficial snap package recipe for [Feishin](https://github.com/jeffvli/feishin).
+
+## 🚀 Quick Start
+
+### 📦 Setup Snapcraft (with Multipass backend)
 
 1. Install Snapcraft:
    ```bash
@@ -22,34 +28,31 @@ Unofficial snap package for [Feishin](https://github.com/jeffvli/feishin).
    multipass --version
    ```
 
-## Build
+### 🛠️ Build
 
-Clone the repository:
+1. Clone the repository:
 
-```bash
-git clone https://github.com/f-bn/feishin-snap.git
-```
+   ```bash
+   git clone https://github.com/f-bn/feishin-snap.git
+   ```
 
-Build the snapcraft package:
+2. Build the snapcraft package:
 
-```bash
-snapcraft pack
-```
+   ```bash
+   snapcraft pack
+   ```
 
-> [!NOTE]
-> Snapcraft will launch a Multipass VM, build the snap inside it, and output a `.snap` file in the current directory.
+3. Install the locally built snap:
 
-To install the locally built snap:
+   ```bash
+   sudo snap install feishin_*.snap --dangerous
+   ```
 
-```bash
-sudo snap install feishin_*.snap --dangerous
-```
+4. After installation, connect the required interface for secure password storage:
 
-After installation, connect the required interface for secure password storage:
-
-```bash
-sudo snap connect feishin:password-manager-service
-```
+   ```bash
+   sudo snap connect feishin:password-manager-service
+   ```
 
 ## Validation checklist
 
