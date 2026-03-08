@@ -1,13 +1,27 @@
 ---
 version: 3
+env:
+  SNAPCRAFT_BUILD_ENVIRONMENT: multipass
 tasks:
   build:
     aliases: [pack]
+    desc: Build snap package
     cmds:
       - snapcraft pack
   extract:
+    desc: Extract snap for debugging
     cmds:
       - unsquashfs -d snap-root feishin_*.snap
   clean:
+    desc: Clean build and debug artifacts
     cmds:
       - rm -rf snap-root feishin_*.snap
+  install:
+    desc: Install snap on local system
+    cmds:
+      - sudo snap install --dangerous feishin_*.snap
+  uninstall:
+    desc: Uninstall snap from local system
+    cmds:
+      - sudo snap remove --purge feishin 
+
