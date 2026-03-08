@@ -6,6 +6,8 @@ description: |
   Feishin requires access to the `password-manager-service` interface for secure password storage:
   `sudo snap connect feishin:password-manager-service`
 website: https://github.com/jeffvli/feishin
+contact: https://github.com/f-bn/feishin-snap/issues
+issues: https://github.com/f-bn/feishin-snap/issues
 license: GPL-3.0+
 icon: snap/gui/feishin.png
 
