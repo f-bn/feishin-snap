@@ -1,4 +1,5 @@
 name: feishin
+version: 1.6.0
 title: Feishin
 summary: A modern self-hosted music player
 description: |
@@ -11,7 +12,6 @@ issues: https://github.com/f-bn/feishin-snap/issues
 license: GPL-3.0+
 icon: snap/gui/feishin.png
 
-version: 1.6.0
 base: core24
 grade: devel
 confinement: strict
