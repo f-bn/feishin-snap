@@ -7,3 +7,4 @@ Terminal=false
 Type=Application
 Categories=Audio;Music;Player;AudioVideo;
 StartupWMClass=Feishin
+SingleMainWindow=true
