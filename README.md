@@ -12,17 +12,12 @@ This repository contains an unofficial snap package recipe for [Feishin](https:/
 
 ### 📦 Setup Snapcraft (with Multipass backend)
 
-1. Install Snapcraft:
+1. Install Snapcraft and Multipass:
    ```bash
-   sudo snap install snapcraft --classic
+   task setup
    ```
 
-2. Install Multipass:
-   ```bash
-   sudo snap install multipass
-   ```
-
-3. Verify both are installed:
+2. Verify both are installed:
    ```bash
    snapcraft --version
    multipass --version
@@ -34,24 +29,19 @@ This repository contains an unofficial snap package recipe for [Feishin](https:/
 
    ```bash
    git clone https://github.com/f-bn/feishin-snap.git
+   cd feishin-snap
    ```
 
 2. Build the snapcraft package:
 
    ```bash
-   snapcraft pack
+   task build
    ```
 
 3. Install the locally built snap:
 
    ```bash
-   sudo snap install feishin_*.snap --dangerous
-   ```
-
-4. After installation, connect the required interface for secure password storage:
-
-   ```bash
-   sudo snap connect feishin:password-manager-service
+   task install
    ```
 
 ## ✅ Checklist
