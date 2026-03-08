@@ -53,7 +53,6 @@ apps:
       DISABLE_AUTO_UPDATES: 'true'
     plugs:
       - audio-playback
-      - home
       - network
       - password-manager-service
       - screen-inhibit-control
