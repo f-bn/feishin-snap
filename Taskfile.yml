@@ -20,6 +20,7 @@ tasks:
     desc: Install snap on local system
     cmds:
       - sudo snap install --dangerous feishin_*.snap
+      - sudo snap connect feishin:password-manager-service
   uninstall:
     desc: Uninstall snap from local system
     cmds:
