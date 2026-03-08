@@ -3,6 +3,11 @@ version: 3
 env:
   SNAPCRAFT_BUILD_ENVIRONMENT: multipass
 tasks:
+  setup:
+    desc: Setup build environment
+    cmds:
+      - sudo snap install snapcraft --classic
+      - sudo snap install multipass
   build:
     aliases: [pack]
     desc: Build snap package
